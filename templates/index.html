@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SARIMAX Forecast</title>
+</head>
+<body>
+    <h1>SARIMAX Forecast Chart</h1>
+    <form method="post">
+        Start Date: <input type="date" name="start_date">
+        End Date: <input type="date" name="end_date">
+        <input type="submit" value="Show Chart">
+    </form>
+    {% if chart %}
+        <img src="data:image/png;base64,{{ chart }}">
+    {% endif %}
+</body>
+</html>
